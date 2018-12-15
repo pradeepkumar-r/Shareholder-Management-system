@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+        <title>Share market</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  ><!..bootstrap link..>
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" ><!..*w3-css link*..>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    top:0;
+    width:100%;
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: 0%;
+    text-align: center;
+    list-style: none;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+	}
+li a:hover {
+    background-color: #111;
+}
+
+
+</style>
+</head>
+<body style="background-color:#212529">
+<!..Nav bar..>
+<ul>
+  <li><a title="contact" href="#contact">Contact</a></li>
+  <li><a title="about" href="#about">About</a></li>
+  <li style="float:right"><a title="Welcome">Share Market</a></li>
+</ul>
+<!..slide images..>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container" >
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators " margin-left="0%">
+      <li data-target="#myCarousel"   data-slide-to="0"></li>
+      <li data-target="#myCarousel" data-slide-to="1"  class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" >
+
+      <div class="item ">
+        <img src="https://s3.ap-southeast-1.amazonaws.com/cdn.deccanchronicle.com/sites/default/files/BSE-Sensex_0.jpg" >
+        <div class="carousel-caption">
+          <h2 class="w3-opacity"><b>INVEST HERE</b></h2>
+          <p><b>GET MORE MONEY</b></p>
+        </div>
+        </div>
+
+      <div class="item active">
+        <img src="https://s3.envato.com/files/127188905/Stock%20market%20Preview.jpg" style="width:100%"; >
+        <div class="carousel-caption">
+          <h2 class="w3-opacity"><b>OUR FORMULA</b></h2>
+          <p><b>TRUST OURSELF</b></p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="https://www.intel.com/content/dam/www/public/us/en/images/photography-consumer/16x9/how-to-increase-wifi-speed.jpg.rendition.intel.web.1648.927.jpg" style="width:100%";>
+        
+        <div class="carousel-caption">
+          <h2 class="w3-opacity"><b>INTERESTING ONE</b></h2>
+          <p><b>IN SHAREMARKET ONE INVEST ,ANOTHER ONE BUYS A SAME</b></p>
+         </div>
+  
+         </div>
+		 
+		 </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+<br>
+<div id="about">
+<h1 class="w3-opacity-max w3-text-white" style="text-align:center;">BUILD YOUR OWN DREAMS</h1>
+<h4 class="w3-opacity w3-text-white" style="text-align:center;font-family:verdana;"><b>This company tells about current company shares and their status.we start this service in 1999.Our other achiements are app@here.Our company's owner studied in canada but they worked here for years to make our country wealth
+</b></h4>
+</div>
+<br>
+</br>
+
+
+<div align="center">
+ <div class="w3-card-4" style="width:75%;">
+    <header class="w3-container w3-green">
+      <h1>Login</h1>
+      
+<br>
+<br>
+    </header>
+
+    <div class="w3-container" id="contact">
+      <form class="w3-container" method="POST" action="ShareMarketIndexController.do">
+          <p class="w3-text-white">Role</p>
+ <select style="width:50%" name="role">
+  <option value="broker">Stockbroker</option>
+  <option value="holder">Shareholder</option>
+</select>
+          <p class="w3-text-white">Username</p>
+  <input class="w3-input " type="text" style="width:60%" name="username" autofocus autocomplete="on" required><br>
+  <p class="w3-text-white">Password</p>
+  <input class="w3-input " type="password" style="width:60%"  name="password" required>
+ <input TYPE="hidden" NAME="hidden" VALUE="validateData">
+  <br>
+    
+    <input type="submit" class="w3-button w3-black" value="Log in">
+     <br>
+     <br>
+</form>
+    </div>
+    <footer class="w3-container w3-green">
+        <a title="Welcome" data-toggle="modal" data-target="#brokermodal">Create a new account</a>
+    </footer>
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+  <!-- brokerModal -->
+  <div class="modal fade" id="brokermodal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="color:green">Share Market</h4>
+        </div>
+        <div class="modal-body">
+ <form class="w3-container" method="post" action="ShareMarketIndexController.do">
+     <p>ROLE</p>
+      <select style="width:50%" name="role">
+  <option value="broker">Stockbroker</option>
+  <option value="holder">Shareholder</option>
+  <option value="admin">Admin</option>
+</select>
+ <p>Username</p>
+  <input class="w3-input w3-animate-input" type="email" style="width:135px" autofocus autocomplete="on" name="username" required><br>
+  <p>Password</p>
+  <input class="w3-input  w3-animate-input" type="password" name="password" style="width:135px"  required>
+  <p>Name</p>
+  <input class="w3-input  w3-animate-input" type="text" style="width:135px" name="name" required>
+  <p>DOB</p>
+  <input class="w3-input  w3-animate-input" type="date" style="width:135px" name="dob"  required>
+  <p>Country</p>
+  <input class="w3-input  w3-animate-input" type="text" style="width:135px"  name="country"  required>
+  <p>city</p>
+  <input class="w3-input  w3-animate-input" type="text" style="width:135px" name="city"  required>
+ <input TYPE="hidden" NAME="hidden" VALUE="storeData">
+  <p></p>
+   <input type="submit" class="w3-button w3-black" value="Sign up">
+    <!--<input type="button" class="w3-button w3-black" value="Log in">-->
+</form>
+    </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Holdermodel-->
+ <div class="modal fade" id="holdermodal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="color:green">Shareholder</h4>
+        </div>
+        <div class="modal-body">
+ <form class="w3-container">
+ <p>Username</p>
+  <input class="w3-input w3-animate-input" type="email" style="width:135px" name="username" autofocus autocomplete="on" required><br>
+  <p>Password</p>
+  <input class="w3-input  w3-animate-input" type="text" style="width:135px"  name="password" autocomplete="on" required>
+  <p>Name</p>
+  <input class="w3-input  w3-animate-input" type="text" style="width:135px" name="name" required>
+  <p>DOB</p>
+  <input class="w3-input  w3-animate-input" type="date" style="width:135px" name="dob"  required>
+  <p>Country</p>
+  <input class="w3-input  w3-animate-input" type="text" style="width:135px"  name="country"  required>
+  <p>city</p>
+  <input class="w3-input  w3-animate-input" type="text" style="width:135px" name="city"  required>
+  <p></p>
+   <input type="button" class="w3-button w3-black" value="Sign up">
+    <input type="button" class="w3-button w3-black" value="Log in">
+</form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
